@@ -1,0 +1,67 @@
+<!DOCTYPE html> <!-- Tells browser engine that it can use the pure standard specifics and it does not need to use less efficient 'quirk-modes' for markup interpretation. Basically it says that we don't care any longer to guarantee compatibility with the old non-standard engines of the Netscape-Explorer-browser-war age-->
+<html lang="en"> <!--Lang must be there for accessibility reason and help screen-readers or the like to analyze content. Reminder: it can be applied to most tags. For example, if you have a <p> in Italian, you should actually write <p lang="it"> to make a screen-reader aware that it is about to interpret a different language. All the more useful since the :lang CSS pseudo-class exists-->
+<head>
+	<meta charset="UTF-8"> <!--UTF-8 is the only valid charset for standard HTML 5. Please note that this is a so-called "void" element. It must not have a closing </meta> tag. Moreover, also the <meta /> syntax is wrong, but it is often forgiven by parser, because it is a very common bad practice nowadays. The same is true for <link>-->
+    <!-- EDIT20230531B Removed width=device-width and changed scale-->
+    <meta name="viewport" content="initial-scale=0.5"> <!--The browser's viewport is the area of the window in which web content can be seen. This is often not the same size as the rendered page. With this settings "viewport" helps mitigate the rendering issues with small screens (mobile).-->
+    <!-- END EDIT20230531B -->
+    <title>PLFTP - Discovering Istanbul</title> <!--What is this page about? The cleaner format to use is "Title of the Website - Titole of the page". Don't add long descriptions, or keywords here. It will lower SEO scores. There are other meta tags for that, if you need them.-->
+    <link rel="stylesheet" href="./assets/css/normalize.css" media="screen"> <!-- Often is preferrable to "normalize" the CSS to make the styling behavior more uniform on the different browser. Following MDN's advice, I prefer to user a normalization rather than a more radical reset. -->
+    <link rel="stylesheet" href="./assets/css/main.css" media="screen"> <!--Always add "media" for accessibility reasons. We are styling for a screen. Different user agents in the best case would waste precious resources analyzing this file for nothing and in the worst case scenario might be confused and make mistakes.-->  
+    <!--mapbox-->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+</head>
+
+<body>
+    <div class="container">
+        <div id="info-card-layer" class="layer info-card" hidden>
+            <button type="button" id="hide-info-card" class="hide-button" onclick="hideInfoCard()"><abbr title="Hides the info card and shows the map again">X</abbr></button>
+            <!--It's better to add the "type" attribute, because otherwise browsers might try to send data from a form anyway.-->
+            <div id="card-container">
+                <button type="button" id="show-ARViewer" class="show-button"><abbr title="Shows the camera video stream and the overlay with the slide-based narrative">Explore</abbr></button> <!-- showArview's parameter mimics what has to happen when we'll use MapBox. MapBox reads point of interest's data from a JSON and uses them as parameters both for the Info Card and the AR Viewer. In this case it passes the appropriate spritemap to the AR Viewer.-->
+                <p id="card-title"></p>
+                <p id="card-description"></p>
+            </div>
+           
+        </div>
+        <div id="sidebar" class="layer sidebar">
+            <div class='heading'>
+                Istanbul - Turkey
+              </div>
+            <div id="listings" class="listings"></div>
+            <button type="button" id="hide-sidebar" class="hide-button sidebarbtn" onclick="hideSidebar()"><abbr title="Hides the sidebar">&#10006;</abbr></button>
+            <button type="button" id="back-to-index" class="back-button sidebarbtn" onclick="back2Index()"><abbr title="Back to index page">&#11013;</abbr></button>
+        </div>
+        <div id="map" class="layer map">
+            <button type="button" id="show-sidebar" class="show-button sidebarbtn" onclick="showSidebar()"><abbr title="Shows the sidebar">&#9776;</abbr></button>
+        </div>
+        <div id="arviewer-layer" class="arviewer" hidden>
+            <video id='video'
+                autoplay playsinline>
+                Sorry, video element not supported in your browser
+            </video>
+            <!--EDIT20230531A-->
+            <picture>
+                <source id="story-webp" srcset="" type="image/webp">
+                <img id="story" src="">
+            </picture>
+            <img id="story" src="">
+            <!-- END EDIT20230531A -->
+            <div id="left-frame" class="frame">
+                <button type="button" id="back2map" class="show-button sidebarbtn" onclick="back2Map()"><abbr title="Back to city map">&#11013;</abbr></button>
+            </div>
+            <div id="right-frame" class="frame"></div>
+            <button type="button" id="hide-ar-viewer" class="hide-button" onclick="hideARViewer()"><abbr title="Closes the AR Viewer and goes back to map">X</abbr></button>     
+        </div>
+    </div>
+    <div id="error"></div>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/map-istanbul-en.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- Tells browser engine that it can use the pure standard specifics and it does not need to use less efficient 'quirk-modes' for markup interpretation. Basically it says that we don't care any longer to guarantee compatibility with the old non-standard engines of the Netscape-Explorer-browser-war age-->
+<html lang="en"> <!--Lang must be there for accessibility reason and help screen-readers or the like to analyze content. Reminder: it can be applied to most tags. For example, if you have a <p> in Italian, you should actually write <p lang="it"> to make a screen-reader aware that it is about to interpret a different language. All the more useful since the :lang CSS pseudo-class exists-->
+<head>
+	<meta charset="UTF-8"> <!--UTF-8 is the only valid charset for standard HTML 5. Please note that this is a so-called "void" element. It must not have a closing </meta> tag. Moreover, also the <meta /> syntax is wrong, but it is often forgiven by parser, because it is a very common bad practice nowadays. The same is true for <link>-->
+    <!-- EDIT20230531B Removed width=device-width and changed scale-->
+    <meta name="viewport" content="initial-scale=0.5"> <!--The browser's viewport is the area of the window in which web content can be seen. This is often not the same size as the rendered page. With this settings "viewport" helps mitigate the rendering issues with small screens (mobile).-->
+    <!-- END EDIT20230531B -->
+    <title>Playing & Learning from the Past - Home</title> <!--What is this page about? The cleaner format to use is "Title of the Website - Title of the page". Don't add long descriptions, or keywords here. It will lower SEO scores. There are other meta tags for that, if you need them.-->
+    <link rel="stylesheet" href="./assets/css/normalize.css" media="screen"> <!-- Often is preferrable to "normalize" the CSS to make the styling behavior more uniform on the different browser. Following MDN's advice, I prefer to user a normalization rather than a more radical reset. -->
+    <link rel="stylesheet" href="./assets/css/main.css" media="screen"> <!--Always add "media" for accessibility reasons. We are styling for a screen. Different user agents in the best case would waste precious resources analyzing this file for nothing and in the worst case scenario might be confused and make mistakes.-->  
+</head>
+
+<body>
+    <div class="container">
+        
+        <div id="sidebar" class="layer sidebar">
+            <div class='heading'>
+                Choose a location
+            </div>
+            <div id="listings" class="listings">
+                <div class="heading">English</div>
+                <div class="item">
+                    <a class="title" href="iasi-en.html">Iași - Romania</a>
+                </div>
+                <div class="item">
+                    <a class="title" href="istanbul-en.html">Istanbul - Turkey</a>
+                </div>
+                <div class="item">
+                    <a class="title" href="foligno-en.html">Foligno - Italy</a>
+                </div>
+                <div class="item">
+                    <a class="title" href="trikala-en.html">Trikala - Greece</a>
+                </div>
+                <div class="heading">Ελληνικά</div>
+                <div class="item">
+                    <a class="title" href="trikala-gr.html">Τρίκαλα</a>
+                </div>
+                <div class="heading">Italiano</div>
+                <div class="item">
+                    <a class="title" href="foligno-it.html">Foligno</a>
+                </div>
+                <div class="heading">Română</div>
+                <div class="item">
+                    <a class="title" href="iasi-ro.html">Iași</a>
+                </div>
+                <div class="heading">Türkçe</div>
+                <div class="item">
+                    <a class="title" href="istanbul-tr.html">Istanbul</a>
+                </div>
+            </div>
+        </div>
+        <div id="map" class="layer splash">
+            <img id="splashimage" src="assets/img/splashscreen.jpg" alt="Playing and Learning from the Past">
+        </div>
+    </div>
+</body>
+</html>
+
+

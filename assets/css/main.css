@@ -1,0 +1,372 @@
+/* CUSTOM PROPERTIES */
+
+
+:root {
+    /* Remember: put here only the variables that have a global scope. Otherwise it is better to insert them in the specific closure where they have to act upon. */
+    --font-size: 1.1rem;
+    --font-family: Helvetica, Arial, sans-serif;
+    --opacity: 0.5;
+}
+
+/* ------------------- */
+/*        TYPES        */
+/* ------------------- */
+
+/* EDIT20230531B*/
+html, body {
+  height: 100%;
+}
+/* END EDIT20230531B*/
+
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+}
+
+/* ------------------ */
+/*       LAYERS       */
+/* ------------------ */
+
+.container {
+    position: relative;
+    width:  100vw;
+    /* EDIT20230531B*/
+    /* height: 100vh; */
+    min-height: 100%;
+    /* EDIT20230531B*/
+    margin: 0px;
+    padding: 0px;
+    /*background-color: aqua; DEVELOPMENT ONLY*/
+}
+
+.layer {
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    /* EDIT20230531B*/
+    /* height: 100vh; */
+    min-height: 100%;
+    /* EDIT20230531B*/
+    padding: 0px;
+}
+
+.info-card {
+    z-index: 10;
+}
+
+.sidebar {
+     /* border: 2px solid blue; DEVELOPMENT ONLY*/
+     border-right: 1px solid rgba(0, 0, 0, 0.25);
+     background-color: #fff;
+     /* opacity: var(--opacity); DEVELOPMENT ONLY*/
+     z-index: 8;
+     width: 20vw;
+}
+.heading {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    min-height: 40px;
+    line-height: 40px;
+    padding-top: 10px;
+    background-color: #fff;
+    color: #404040;
+    margin: 0;
+  }
+
+.map {
+    z-index: 6;
+}
+
+.splash {
+  left: 20vw;
+  width: 80vw;
+}
+
+#splashimage {
+  width: 100%
+}
+
+.arviewer {
+    /* background-color: lightpink; DEVELOPMENT ONLY*/
+    /* opacity: var(--opacity); DEVELOPMENT ONLY*/
+    z-index: 4;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    /* EDIT20230531B*/
+    /* height: 100vh; */
+    min-height: 100%;
+    /* EDIT20230531B*/
+}
+
+/* ----------------- */
+/*    UI ELEMENTS    */
+/* ----------------- */
+
+/* HIDE BUTTONS */
+.hide-button {
+    position: absolute;
+    top: 1vmin;
+    right: 1vmin;
+    background-color: #00853e;
+    color: white;
+}
+
+.hide-button:hover {
+    background-color: #8cc63f;
+    color: white;
+}
+
+#hide-ar-viewer {
+    position: fixed;
+}
+
+/* BACK BUTTONS */
+.back-button {
+  position: absolute;
+  top: 1vmin;
+  left: 1vmin;
+  background-color: #00853e;
+  color: white;
+}
+
+.back-button:hover {
+  background-color: #8cc63f;
+  color: white;
+}
+
+
+/* SHOW BUTTONS */
+.show-button {
+    position: absolute;
+    top: 1vmin;
+    left: 1vmin;
+    background-color: #00853e;
+    color: white;
+
+}
+
+.show-button.sidebarbtn{
+    z-index: 7;
+    position: absolute;
+    top: 1vmin;
+    left: 1vmin;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+.show-button.arviewbtn{
+  z-index: 7;
+  position: absolute;
+  top: 1vmin;
+  left: 1vmin;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+.show-button:hover {
+    background-color: #8cc63f;
+    color: white;
+}
+
+#show-info-card {
+    top: 20vh;
+    left: 50vw;
+    background-color: #00853e;
+    color: white;
+}
+
+#show-info-card:hover {
+    background-color: #8cc63f;
+    color: white;
+}
+
+
+#show-ARViewer {
+    position: relative;
+    /*
+    top: 25vh;
+    left: 50vw;*/
+    background-color: #00853e;
+    color: white;
+}
+
+#show-ARViewer:hover {
+    background-color: #8cc63f;
+    color: white;
+}
+
+
+/* --------------------------- */
+/*     Info card elements      */
+/* --------------------------- */
+
+#card-container {
+    position: absolute;
+    border: 1px solid black;
+    left: calc(50vw - 30rem);
+    top: 15%;
+    width: 60rem;
+}
+
+#card-title {
+    font-size: calc(var(--font-size) * 2);
+    font-weight: 600;
+    font-family: var(--font-family);
+}
+
+#card-description {
+    position: relative;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    line-height: 150%;
+    left: 7rem;
+    width: 46rem;
+    text-align: left;
+}
+
+
+/* ------------------------- */
+/*     AR Viewer elements    */
+/* ------------------------- */
+
+#video {
+    margin-left: 0;
+    margin-top: calc(50vh - 360px);
+    position: fixed;
+    left: calc(50vw - 480px);
+    width: 960px;
+    height: 720px;
+    padding: 0px;
+    /* EDIT20230531A*/
+    z-index: 2
+    /* END EDIT20230531A*/
+}
+
+#story {
+    position: absolute;
+    left: calc(50vw - 480px);
+    margin-left: 0;
+    margin-top: calc(50vh - 360px);
+    /*border: 2px solid orange;*/
+    padding: 0px;
+    /* EDIT20230531A*/
+    z-index: 4
+    /* END EDIT20230531A*/
+}
+
+.frame {
+    position: fixed;
+    top: 0px;
+    height:100vh;
+    width: calc(50vw - 480px);
+    background-color: white;
+    /* EDIT20230531A*/
+    z-index: 6
+    /* END EDIT20230531A*/
+}
+
+#left-frame {
+    left: 0px;
+}
+
+#right-frame {
+    left: calc(50vw + 480px);
+}
+
+/* ---------------- */
+/* Listing x pop-up */
+/* ---------------- */
+
+.center{
+    margin-top: 10px;
+    background-color: #404040;
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 15px;
+    align-self: center;
+  }
+  .mapboxgl-popup-close-button{
+    font-size: 30px;
+  }
+  .listings {
+    height: 100%;
+    bottom: 30%;
+    overflow: auto;
+    padding-bottom: 60px;
+    text-align: left;
+  }
+
+  .listings .item {
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  .listings .item:last-child {
+    border-bottom: none;
+  }
+
+  .listings .item .title {
+    display: block;
+    color: #00853e;
+    font-weight: 700;
+  }
+
+  .listings .item .title small {
+    font-weight: 400;
+  }
+
+  .listings .item.active .title,
+  .listings .item .title:hover {
+    color: #8cc63f;
+  }
+
+  .listings .item.active {
+    background-color: #f8f8f8;
+  }
+
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-left: 0;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #00853e;
+    border-radius: 0;
+  }
+  .marker {
+    border: none;
+    cursor: pointer;
+    height: 56px;
+    width: 56px;
+    background-image: url("../img/markers/marker.png");
+    background-size: cover;
+  }
+/* ---------------- */
+/*       error      */
+/* ---------------- */
+#error {
+    position: fixed;
+    bottom: 2vh;
+    background-color: red;
+    color: white;
+    padding: 0.5rem;
+    z-index: 12;
+    display: none;
+}
