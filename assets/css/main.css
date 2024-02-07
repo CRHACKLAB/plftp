@@ -2,10 +2,15 @@
 
 
 :root {
-    /* Remember: put here only the variables that have a global scope. Otherwise it is better to insert them in the specific closure where they have to act upon. */
-    --font-size: 1.1rem;
-    --font-family: Helvetica, Arial, sans-serif;
-    --opacity: 0.5;
+  /* Remember: put here only the variables that have a global scope. Otherwise it is better to insert them in the specific closure where they have to act upon. */
+  --font-size: 1.1rem;
+  --font-family: Helvetica, Arial, sans-serif;
+  --opacity: 0.5;
+  /* EDIT 20240116 */
+  --camera-screen-width: 80vh;
+  --camera-screen-height: calc(var(--camera-screen-width) * 0.75);
+  /* END EDIT */
+
 }
 
 /* ------------------- */
@@ -14,19 +19,19 @@
 
 /* EDIT20230531B*/
 html, body {
-  height: 100%;
+height: 100%;
 }
 /* END EDIT20230531B*/
 
 body {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    font-size: var(--font-size);
-    font-family: var(--font-family);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
 }
 
 /* ------------------ */
@@ -34,76 +39,83 @@ body {
 /* ------------------ */
 
 .container {
-    position: relative;
-    width:  100vw;
-    /* EDIT20230531B*/
-    /* height: 100vh; */
-    min-height: 100%;
-    /* EDIT20230531B*/
-    margin: 0px;
-    padding: 0px;
-    /*background-color: aqua; DEVELOPMENT ONLY*/
+  position: relative;
+  /*position: absolute;
+  top: 0px;
+  left: auto;*/
+  width:  100vw;
+  /* EDIT20230531B*/
+  /* height: 100vh; */
+  min-height: 100%;
+  /* EDIT20230531B*/
+  margin: 0px;
+  padding: 0px;
+  /*background-color: aqua; DEVELOPMENT ONLY*/
 }
 
 .layer {
-    position: absolute;
-    top: 0px;
-    width: 100vw;
-    /* EDIT20230531B*/
-    /* height: 100vh; */
-    min-height: 100%;
-    /* EDIT20230531B*/
-    padding: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  /* EDIT20230531B*/
+  /* height: 100vh; */
+  min-height: 100%;
+  /* EDIT20230531B*/
+  padding: 0px;
 }
 
 .info-card {
-    z-index: 10;
+  z-index: 10;
 }
 
 .sidebar {
-    /* border: 2px solid blue; DEVELOPMENT ONLY */
-    border-right: 1px solid rgba(0, 0, 0, 0.25);
-    background-color: #fff;
-    /* opacity: var(--opacity); DEVELOPMENT ONLY*/
-    z-index: 8;
-    width: 20vw;
+  /* border: 2px solid blue; DEVELOPMENT ONLY */
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+  /* background-color: #fff; 20240114*/
+  background-color: #FFEED2;
+  /* opacity: var(--opacity); DEVELOPMENT ONLY*/
+  z-index: 8;
+  width: 20vw;
 }
 .heading {
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    min-height: 40px;
-    line-height: 40px;
-    padding-top: 10px;
-    background-color: #fff;
-    color: #404040;
-    margin: 0;
-  }
+  border-bottom: 1px solid #eee;
+  min-height: 40px;
+  line-height: 40px;
+  padding-top: 10px;
+  /* background-color: #fff; 20240114*/
+  background-color: #FFEED2; /*20240114*/
+  color: #32679A; /*20240114*/
+  margin: 0;
+}
 
 .map {
-    z-index: 6;
+  z-index: 6;
 }
 
 .splash {
-  left: 20vw;
-  width: 80vw;
+left: 20vw;
+width: 80vw;
 }
 
 #splashimage {
-  width: 100%
+width: 100%;
 }
 
 .arviewer {
-    /* background-color: lightpink; DEVELOPMENT ONLY */
-    /* opacity: var(--opacity); DEVELOPMENT ONLY*/
-    z-index: 4;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    /* EDIT20230531B*/
-    height: 100vh;
-    min-height: 100%;
-    /* EDIT20230531B*/
+  /* background-color: lightpink; DEVELOPMENT ONLY */
+  /* opacity: var(--opacity); DEVELOPMENT ONLY*/
+  z-index: 4;
+  position: absolute;
+  /*position: fixed;*/
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  /*width: 720px;*/
+  /* EDIT20230531B*/
+  height: 100vh;
+  /*height: 720px;*/
+  min-height: 100%;
+  /* EDIT20230531B*/
 }
 
 /* ----------------- */
@@ -112,57 +124,53 @@ body {
 
 /* HIDE BUTTONS */
 .hide-button {
-    position: absolute;
-    top: 1vmin;
-    right: 1vmin;
-    background-color: #00853e;
-    color: white;
+  position: absolute;
+  top: 1vmin;
+  right: 1vmin;
+  /* background-color: #00853e; 20240114 */
+  background-color: #32679A;
+  color: white;
+  font-size: calc(var(--font-size) * 1.8); /* 20240114 */
 }
 
 .hide-button:hover {
-    background-color: #8cc63f;
-    color: white;
+  background-color: #8cc63f;
+  color: white;
 }
 
 #hide-ar-viewer {
-    position: fixed;
+  position: fixed;
 }
 
 /* BACK BUTTONS */
 .back-button {
-  position: absolute;
-  top: 1vmin;
-  left: 1vmin;
-  background-color: #00853e;
-  color: white;
+position: absolute;
+top: 1vmin;
+left: 1vmin;
+/* background-color: #00853e; 20240114 */
+background-color: #32679A;
+color: white;
+font-size: calc(var(--font-size) * 1.8); /* 20240114 */
 }
 
 .back-button:hover {
-  background-color: #8cc63f;
-  color: white;
+background-color: #8cc63f;
+color: white;
 }
 
 
 /* SHOW BUTTONS */
 .show-button {
-    position: absolute;
-    top: 1vmin;
-    left: 1vmin;
-    background-color: #00853e;
-    color: white;
-
+  position: absolute;
+  top: 1vmin;
+  left: 1vmin;
+  /* background-color: #00853e; 20240114 */
+  background-color: #32679A;
+  color: white;
+  font-size: calc(var(--font-size) * 1.8); /* 20240114 */
 }
 
 .show-button.sidebarbtn{
-    z-index: 7;
-    position: absolute;
-    top: 1vmin;
-    left: 1vmin;
-    border-radius: 10px;
-    font-size: 30px;
-}
-
-.show-button.arviewbtn{
   z-index: 7;
   position: absolute;
   top: 1vmin;
@@ -171,36 +179,45 @@ body {
   font-size: 30px;
 }
 
+.show-button.arviewbtn{
+z-index: 7;
+position: absolute;
+top: 1vmin;
+left: 1vmin;
+border-radius: 10px;
+font-size: 30px;
+}
+
 .show-button:hover {
-    background-color: #8cc63f;
-    color: white;
+  background-color: #8cc63f;
+  color: white;
 }
 
 #show-info-card {
-    top: 20vh;
-    left: 50vw;
-    background-color: #00853e;
-    color: white;
+  top: 20vh;
+  left: 50vw;
+  background-color: #00853e;
+  color: white;
 }
 
 #show-info-card:hover {
-    background-color: #8cc63f;
-    color: white;
+  background-color: #8cc63f;
+  color: white;
 }
 
 
 #show-ARViewer {
-    position: relative;
-    /*
-    top: 25vh;
-    left: 50vw;*/
-    background-color: #00853e;
-    color: white;
+  position: relative;
+  /*
+  top: 25vh;
+  left: 50vw;*/
+  background-color: #00853e;
+  color: white;
 }
 
 #show-ARViewer:hover {
-    background-color: #8cc63f;
-    color: white;
+  background-color: #8cc63f;
+  color: white;
 }
 
 
@@ -209,27 +226,27 @@ body {
 /* --------------------------- */
 
 #card-container {
-    position: absolute;
-    border: 1px solid black;
-    left: calc(50vw - 30rem);
-    top: 15%;
-    width: 60rem;
+  position: absolute;
+  border: 1px solid black;
+  left: calc(50vw - 30rem);
+  top: 15%;
+  width: 60rem;
 }
 
 #card-title {
-    font-size: calc(var(--font-size) * 2);
-    font-weight: 600;
-    font-family: var(--font-family);
+  font-size: calc(var(--font-size) * 2);
+  font-weight: 600;
+  font-family: var(--font-family);
 }
 
 #card-description {
-    position: relative;
-    font-size: var(--font-size);
-    font-family: var(--font-family);
-    line-height: 150%;
-    left: 7rem;
-    width: 46rem;
-    text-align: left;
+  position: relative;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  line-height: 150%;
+  left: 7rem;
+  width: 46rem;
+  text-align: left;
 }
 
 
@@ -238,47 +255,63 @@ body {
 /* ------------------------- */
 
 #video {
-    margin-left: 0;
-    margin-top: calc(50vh - 360px);
-    position: fixed;
-    left: calc(50vw - 480px);
-    width: 960px;
-    height: 720px;
-    padding: 0px;
-    /* EDIT20230531A*/
-    z-index: 2
-    /* END EDIT20230531A*/
+  position: fixed;
+  margin-left: 0;
+  /*margin-top: calc(50vh - 360px);*/
+  margin-top: calc(50vh - (var(--camera-screen-height) / 2));
+  /*
+  left: calc(50vw - 480px);
+  width: 960px;
+  height: 720px;
+  */
+  left: calc(50vw - (var(--camera-screen-width) / 2));
+  width: var(--camera-screen-width);
+  height: var(--camera-screen-height);   
+  padding: 0px;
+  /* EDIT20230531A*/
+  z-index: 2
+  /* END EDIT20230531A*/
 }
 
-#story {
-    position: absolute;
-    left: calc(50vw - 480px);
-    margin-left: 0;
-    margin-top: calc(50vh - 360px);
-    /* border: 2px solid orange; */
-    padding: 0px;
-    /* EDIT20230531A*/
-    z-index: 4
-    /* END EDIT20230531A*/
+#story-container {
+position: absolute;
+/*left: calc(50vw - 480px);*/
+left: calc(50vw - (var(--camera-screen-width)/2));
+margin-left: 0;
+/*margin-top: calc(50vh - 360px);*/
+margin-top: calc(50vh - (var(--camera-screen-height)/2));
+/* border: 2px solid orange; */
+height: var(--camera-screen-height); 
+z-index: 4
+}
+
+#story, #story-webp {
+  max-height: 100%;
+  padding: 0px;
+  /* EDIT20230531A*/
+  /*z-index: 4*/
+  /* END EDIT20230531A*/
 }
 
 .frame {
-    position: fixed;
-    top: 0px;
-    height:100vh;
-    width: calc(50vw - 480px);
-    background-color: white;
-    /* EDIT20230531A*/
-    z-index: 6
-    /* END EDIT20230531A*/
+  position: fixed;
+  top: 0px;
+  height:100vh;
+  /*width: calc(50vw - 480px);*/
+  width: calc(50vw - (var(--camera-screen-width)/2));
+  background-color: white;
+  /* EDIT20230531A*/
+  z-index: 6
+  /* END EDIT20230531A*/
 }
 
 #left-frame {
-    left: 0px;
+  left: 0px;
 }
 
 #right-frame {
-    left: calc(50vw + 480px);
+  /*left: calc(50vw + 480px);*/
+  left: calc(50vw + (var(--camera-screen-width)/2));
 }
 
 /* ---------------- */
@@ -286,87 +319,93 @@ body {
 /* ---------------- */
 
 .center{
-    margin-top: 10px;
-    background-color: #404040;
-    color: #fff;
-    border-radius: 5px;
-    padding: 2px;
-    font-size: 15px;
-    align-self: center;
-  }
-  .mapboxgl-popup-close-button{
-    font-size: 30px;
-  }
-  .listings {
-    height: 100%;
-    bottom: 30%;
-    overflow: auto;
-    padding-bottom: 60px;
-    text-align: left;
-  }
+  margin-top: 10px;
+  background-color: #404040;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 15px;
+  align-self: center;
+}
+.mapboxgl-popup-close-button{
+  font-size: 30px;
+}
+.listings {
+  height: 100%;
+  bottom: 30%;
+  overflow: auto;
+  padding-bottom: 60px;
+  text-align: center;  /*20240114*/
+}
 
-  .listings .item {
-    display: block;
-    border-bottom: 1px solid #eee;
-    padding: 10px;
-    text-decoration: none;
-  }
+.listings .item {
+  display: block;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  background-color: #FFEED2; /*20240114*/
+}
 
-  .listings .item:last-child {
-    border-bottom: none;
-  }
+.listings .item:last-child {
+  border-bottom: none;
+}
 
-  .listings .item .title {
-    display: block;
-    color: #00853e;
-    font-weight: 700;
-  }
+.listings .item .title {
+  display: block;
+  /*color: #00853e;*/
+  font-size: calc(var(--font-size) * 1.5); /*20240114*/
+  font-weight: 700;
+  text-decoration: none; /*20240114*/
+  color: white; /*20240114*/
+  background-color: #32679A; /*20240114*/
+  padding: 10px; /*20240114*/
+}
 
-  .listings .item .title small {
-    font-weight: 400;
-  }
+.listings .item .title small {
+  font-weight: 400;
+}
 
-  .listings .item.active .title,
-  .listings .item .title:hover {
-    color: #8cc63f;
-  }
+.listings .item.active .title,
+.listings .item .title:hover {
+  /*background-color: #8cc63f;*/
+  background-color: #F17364;
+}
 
-  .listings .item.active {
-    background-color: #f8f8f8;
-  }
+.listings .item.active {
+  background-color: #f8f8f8;
+}
 
-  ::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
-    border-left: 0;
-    background: rgba(0, 0, 0, 0.1);
-  }
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-left: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
 
-  ::-webkit-scrollbar-track {
-    background: none;
-  }
+::-webkit-scrollbar-track {
+  background: none;
+}
 
-  ::-webkit-scrollbar-thumb {
-    background: #00853e;
-    border-radius: 0;
-  }
-  .marker {
-    border: none;
-    cursor: pointer;
-    height: 56px;
-    width: 56px;
-    background-image: url("../img/markers/marker.png");
-    background-size: cover;
-  }
+::-webkit-scrollbar-thumb {
+  background: #00853e;
+  border-radius: 0;
+}
+.marker {
+  border: none;
+  cursor: pointer;
+  height: 56px;
+  width: 56px;
+  background-image: url("../img/markers/marker.png");
+  background-size: cover;
+}
 /* ---------------- */
 /*       error      */
 /* ---------------- */
 #error {
-    position: fixed;
-    bottom: 2vh;
-    background-color: red;
-    color: white;
-    padding: 0.5rem;
-    z-index: 12;
-    display: none;
+  position: fixed;
+  bottom: 2vh;
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+  z-index: 12;
+  display: none;
 }
