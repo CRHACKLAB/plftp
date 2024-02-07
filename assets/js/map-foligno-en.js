@@ -98,7 +98,7 @@ var stores = {
         description:
           "The church, among the oldest ones in Foligno, lies on the western side of Piazza San Domenico, where once there was an 8th century chapel dedicated to Assunta, San Pietro and San Paolo. The name of the church changed several times during the Middle Ages (13th century) as a consequence of the extension of the walls of the city: the papers of the Abbazia di Santa Croce di Sassovivo report “Santa Maria extra porta” or “foris portam”. After the building of the new boundaries at the end of 13th century, the building was between the two city walls and took the name of “Infra portas”. The walls of this church contain a real art gallery of the best artists from Foligno: just to name a few, Niccolò di Liberatore called l'Alunno, Pierantonio Mezzastris, Giovanni di Corraduccio, Ugolino di Gisberto, Lattanzio di Niccolò, Cristoforo di Jacopo, pupil of Bartolomeo di Tommaso worked there. Externally, to the right of the porch, there is an aedicula dating back to 1480 with a sinopia of the fresco of Sant'Anna crowned by angels, attributable to Mezzastris; at the end of the right side there is the Romanesque bell tower.",
         /* EDIT20230531A*/
-        spritemap: imageDir + "story-placeholder" + langSuffix,
+        spritemap: imageDir + "foligno-maria-infraportas" + langSuffix,
         /* EDIT20230531A*/
       },
     },
@@ -190,7 +190,7 @@ var stores = {
         description:
           "Orti Jacobilli are an old vegetable garden dating back to 17th century, near the medieval walls and followed by the Topino river. An old door from 17th century introduces you to the garden on which stands the Torre dei Cinque Cantoni: a very suggestive place with a precious green area enclosed within the city walls. The southern side of the garden consists of a late medieval wall that fits into the ruins of a late antique bridge (4th-5th centuries). It has an historical importance because it was part of the gardens of the Topino river, traditionally suited to the production of food for citizens, when the city was besieged by enemy armies. In the garden and in the tower, recently restored, an astronomical observatory is housed.",
         /* EDIT20230531A*/
-        spritemap: imageDir + "story-placeholder" + langSuffix,
+        spritemap: imageDir + "foligno-orti-jacobilli" + langSuffix,
         /* EDIT20230531A*/
       },
     },
@@ -213,7 +213,7 @@ var stores = {
         description:
           "One of the first things to see in Foligno is the house of the Trinci family who reigned over the city from 1305 to 1439. It was built between 1389 and 1407 on some pre-existing medieval buildings. During the glorious era of the family, several scholars and prominent personalities of that time were used to walk into Palazzo Trinci. The exterior is neoclassical, while inside there are those typical examples of late gothic that were part of the Palazzo already at the time of its construction. In the inner courtyard there is a beautiful gothic staircase which leads to the loggia frescoed with the legend of the foundation of Rome. From here, you can enter the halls of the noble floor. The chapel is adorned with stories of the Virgin Mary. Through an arched door you can go into the Sala delle Arti e dei Pianeti (“Arts and Planets Room”), where all the liberal arts are represented: Rhetoric, Mathematics, Astronomy, Geometry, Music, Dialectic, Grammar together with Philosophy, the seven planets and the seven ages of man symbolized by a time of the day.",
         /* EDIT20230531A*/
-        spritemap: imageDir + "story-placeholder" + langSuffix,
+        spritemap: imageDir + "foligno-palazzo-trinci" + langSuffix,
         /* EDIT20230531A*/
       },
     },

@@ -73,7 +73,7 @@ var stores = {
         description:
           "",
         /* EDIT20230531A*/
-        spritemap: imageDir + "istanbul-topkapi-palace" + langSuffix,
+        spritemap: imageDir + "istanbul--topkapi-palace" + langSuffix,
         /* EDIT20230531A*/
       },
     },
