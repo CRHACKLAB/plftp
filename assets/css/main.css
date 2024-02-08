@@ -281,22 +281,25 @@ margin-left: 0;
 /*margin-top: calc(50vh - 360px);*/
 margin-top: calc(50vh - (var(--camera-screen-height)/2));
 /* border: 2px solid orange; */
-height: var(--camera-screen-height); 
+height: var(--camera-screen-height);
 z-index: 4
 }
+
 
 #story, #story-webp {
   max-height: 100%;
   padding: 0px;
+  height: 100vh;
   /* EDIT20230531A*/
   /*z-index: 4*/
   /* END EDIT20230531A*/
+  /* margin-top: calc(var(--camera-screen-height)*0.05); */
 }
 
 .frame {
   position: fixed;
   top: 0px;
-  height:100vh;
+  height: 100vh;
   /*width: calc(50vw - 480px);*/
   width: calc(50vw - (var(--camera-screen-width)/2));
   background-color: white;
@@ -323,7 +326,7 @@ z-index: 4
   background-color: #404040;
   color: #fff;
   border-radius: 5px;
-  padding: 2px;
+  padding: 20px;
   font-size: 15px;
   align-self: center;
 }

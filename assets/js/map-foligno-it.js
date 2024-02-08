@@ -167,7 +167,7 @@ var stores = {
         description:
           "Murals painted by Josè Balmes, director of the School of Fine arts of Santiago del Chile, which represents one of the most important living Chilean painters. Murals date back to 1974 concurrently with the arrival in Foligno of the Brigada Louis Corvalan exiled by Pinochet following the coup d'état. In order to repay the warm hospitality by Foligno, the artist painted 80 metres of wall. The murals are full of symbols of freedom and democracy.",
         /* EDIT20230531A*/
-        spritemap: imageDir + "story-placeholder" + langSuffix,
+        spritemap: imageDir + "foligno-murales-cileni" + langSuffix,
         /* EDIT20230531A*/
       },
     },
