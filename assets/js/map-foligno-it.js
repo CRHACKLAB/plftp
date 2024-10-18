@@ -43,7 +43,7 @@ var stores = {
       properties: {
         phoneFormatted: "",
         phone: "",
-        address: "Auditorium S Domenico",
+        address: "Auditorium S. Domenico",
         city: "Foligno",
         country: "Italy",
         crossStreet: "",

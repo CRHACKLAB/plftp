@@ -42,7 +42,7 @@ var stores = {
       properties: {
         phoneFormatted: "",
         phone: "",
-        address: "Central University Library",
+        address: `Biblioteca Centrală Universitară "Mihai Eminescu"`,
         city: "Iasi",
         country: "Romania",
         crossStreet: "",
@@ -64,7 +64,7 @@ var stores = {
       properties: {
         phoneFormatted: "",
         phone: "",
-        address: "Catholic Cathedral Saint Mary",
+        address: `Catedrala episcopală catolică "Sfânta Fecioară Maria"`,
         city: "Iasi",
         country: "Romania",
         crossStreet: "",
@@ -87,7 +87,7 @@ var stores = {
       properties: {
         phoneFormatted: "",
         phone: "",
-        address: "Metropolitan Cathedral",
+        address: `Catedrala Mitropolitană a Moldovei și Bucovinei`,
         city: "Iasi",
         country: "Romania",
         crossStreet: "",
@@ -110,7 +110,7 @@ var stores = {
       properties: {
         phoneFormatted: "",
         phone: "",
-        address: "Trei Ierarhi Monastery",
+        address: "Mănăstirea Trei Ierarhi",
         city: "Iasi",
         country: "Romania",
         crossStreet: "",
@@ -156,7 +156,7 @@ var stores = {
       properties: {
         phoneFormatted: "",
         phone: "",
-        address: "Palace of Culture",
+        address: "Palatul Culturii",
         city: "Iasi",
         country: "Romania",
         crossStreet: "",
@@ -179,7 +179,7 @@ var stores = {
       properties: {
         phoneFormatted: "",
         phone: "",
-        address: "National Theater",
+        address: `Teatrul Național "Vasile Alecsandri" din Iași`,
         city: "Iasi",
         country: "Romania",
         crossStreet: "",
@@ -202,7 +202,7 @@ var stores = {
       properties: {
         phoneFormatted: "",
         phone: "",
-        address: "Casa Dosoftei",
+        address: "Muzeul Mitropolit Dosoftei",
         city: "Iasi",
         country: "Romania",
         crossStreet: "",
